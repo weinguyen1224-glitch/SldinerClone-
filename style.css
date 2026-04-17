@@ -435,6 +435,93 @@ body {
         margin-left: 0;
     }
 
+    .main-wrapper {
+        padding: 0 15px 40px 15px;
+    }
+
+    /* Đổi ảnh Menu thành 1 cột trên mobile */
+    .menu-book-layout img {
+        width: 100%;
+        border-left: none !important;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    }
+
+    /* Thiết kế lại Table (Bảng RCM) cho Mobile */
+    .menu-rcm-area {
+        padding: 20px 15px !important;
+        margin-top: 30px !important; /* Thu gọn margin top trên điện thoại */
+        overflow-x: hidden; /* Đảm bảo wrapper ngoài cùng không cuộn */
+    }
+
+    /* Đảm bảo toàn bộ div bọc table không bị overflow ngang */
+    .menu-rcm-area > div {
+        overflow-x: visible !important; /* Đổi lại thành visible để table bọc 100% không bị cắt xén do container */
+    }
+
+    .menu-rcm-area table,
+    .menu-rcm-area tbody,
+    .menu-rcm-area tr,
+    .menu-rcm-area td {
+        display: block;
+        width: 100% !important; /* Ép cứng tất cả mọi thẻ 100% width của màn hình */
+        box-sizing: border-box;
+        min-width: 0 !important; /* Hủy bỏ min-width: 800px ở màn hình desktop */
+    }
+
+    /* Ẩn thead đi vì trên mobile sẽ tự tạo title giả */
+    .menu-rcm-area thead {
+        display: none;
+    }
+
+    .menu-rcm-area tr {
+        margin-bottom: 30px;
+        border: 2px solid var(--diner-dark);
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    .menu-rcm-area td {
+        border: none !important;
+        border-bottom: 1px solid var(--diner-bg) !important;
+        padding: 15px !important;
+        min-height: auto;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left !important;
+        white-space: normal !important; /* Quan trọng: Cho phép chữ tự động rớt dòng */
+        word-wrap: break-word; /* Quan trọng: Cắt từ nếu quá dài */
+    }
+
+    .menu-rcm-area td:last-child {
+        border-bottom: none !important;
+    }
+
+    /* Cột đầu tiên (Tên món & Hình) */
+    .menu-rcm-area td:nth-child(1) {
+        background: rgba(0,0,0,0.03);
+        text-align: center !important; /* Canh giữa tên món và ảnh */
+    }
+
+    .menu-rcm-area td:nth-child(1) strong {
+        font-size: 18px !important;
+    }
+
+    /* Các cột thông tin: Hiển thị Label (tiêu đề giả) nằm phía trên, nội dung nằm dưới (Stack dọc) */
+    .menu-rcm-area td:nth-child(2):before { content: "Phù hợp cho ai?"; }
+    .menu-rcm-area td:nth-child(3):before { content: "Khẩu phần / Dinh dưỡng:"; }
+    .menu-rcm-area td:nth-child(4):before { content: "So sánh (Điểm nhấn S&L):"; }
+    .menu-rcm-area td:nth-child(5):before { content: "Rating:"; }
+
+    .menu-rcm-area td:not(:nth-child(1)):before {
+        display: block; /* Ép label nằm ở một dòng riêng */
+        font-weight: bold;
+        color: var(--diner-red);
+        margin-bottom: 5px;
+        font-size: 13px;
+        text-transform: uppercase;
+        white-space: normal; /* Cho phép label rớt dòng nếu màn hình quá nhỏ */
+    }
+
     .footer-top,
     .footer-bottom {
         grid-template-columns: 1fr;
