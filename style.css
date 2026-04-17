@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
+
+:root {
+    --diner-bg: #ead9ba; /* Cập nhật màu nền theo yêu cầu */
+    --diner-red: #c42127; /* Đỏ đậm cổ điển */
+    --stripe-red: #da291c; /* Đỏ tươi cho sọc */
+    --diner-dark: #1a1a1a; /* Đen đậm chữ */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--diner-bg);
+    font-family: "Courier Prime", monospace;
+    color: var(--diner-dark);
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===== SỌC ĐỎ TRẮNG BÊN TRÁI ===== */
+.stripes-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px; /* Tăng bề rộng để cân đối sidebar */
+    background: repeating-linear-gradient(
+        0deg,
+        #fff,
+        #fff 4px,
+        var(--stripe-red) 4px,
+        var(--stripe-red) 8px
+    );
+    z-index: 0;
+    border-right: 3px solid var(--diner-dark);
+}
+
+/* ===== SIDEBAR MENU (THẺ ĐẶT MÓN) ===== */
+.diner-sidebar {
+    position: fixed;
+    /* Canh giữa sidebar trong vùng sọc (200px - 160px = 40px dư) -> 20px mỗi bên */
+    left: 20px;
+    top: 15px;
+    bottom: 15px;
+    width: 160px; /* Giữ nguyên độ rộng sidebar */
+    background-color: var(--diner-bg);
+    border: 3px solid var(--diner-dark);
+    border-radius: 10px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 8px;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Nút caro thò ra bên phải của sidebar */
+.checker-tab {
+    position: absolute;
+    right: -12px;
+    top: 25%; /* Điều chỉnh vị trí theo chiều cao mới */
+    width: 12px;
+    height: 60px;
+    background-image: conic-gradient(
+        var(--diner-dark) 90deg,
+        #fff 90deg 180deg,
+        var(--diner-dark) 180deg 270deg,
+        #fff 270deg
+    );
+    background-size: 12px 12px;
+    border: 3px solid var(--diner-dark);
+    border-left: none;
+    z-index: -1;
+}
+
+.checker-tab-2 {
+    top: 45%;
+    height: 40px;
+}
+
+.sidebar-logo {
+    width: 90px; /* Tăng kích thước logo */
+    margin-bottom: 10px;
+}
+
+.sidebar-tagline {
+    font-size: 9px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    padding: 0 5px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Giảm khoảng cách giữa các menu items */
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: var(--diner-dark);
+    font-weight: 700;
+    font-size: 14px; /* Tăng cỡ chữ */
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    padding: 8px 5px; /* Tăng padding để dễ bấm */
+    border-radius: 4px;
+}
+
+.sidebar-nav a:hover {
+    color: var(--diner-red);
+    background-color: rgba(196, 33, 39, 0.1);
+}
+
+.sidebar-nav a.active {
+    color: var(--diner-red);
+    font-weight: 900;
+    background-color: rgba(196, 33, 39, 0.15);
+    border: 2px solid var(--diner-red);
+}
+
+.sidebar-nav a.active .dot {
+    display: inline;
+}
+
+.sidebar-nav .dot {
+    display: none;
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+.sidebar-socials {
+    margin-top: auto;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.sidebar-socials i {
+    background: var(--diner-bg);
+    border: 2px solid var(--diner-dark);
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--diner-dark);
+    transition: all 0.3s;
+}
+
+.sidebar-socials i:hover {
+    background: var(--diner-dark);
+    color: #fff;
+}
+
+.sidebar-flags {
+    display: flex;
+    gap: 10px;
+}
+
+.sidebar-flags img {
+    width: 18px;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* ===== MAIN CONTENT AREA ===== */
+.diner-main {
+    margin-left: 200px; /* Đồng bộ với độ rộng sọc đỏ mới */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+/* Container đồng bộ cho Home và Menu */
+.main-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    /* Bỏ padding trái phải để khung ảnh nằm cân giữa so với không gian còn lại (từ 220px trở đi) */
+    padding: 0 40px 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.diner-header {
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.diner-header h1 {
+    font-family: "Arial Black", Impact, sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    color: var(--diner-dark);
+    text-transform: uppercase;
+}
+
+/* Họa tiết Caro góc trên phải */
+.checker-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background-image: conic-gradient(
+        var(--diner-dark) 90deg,
+        var(--stripe-red) 90deg 180deg,
+        var(--diner-dark) 180deg 270deg,
+        var(--stripe-red) 270deg
+    );
+    background-size: 20px 20px;
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+
+/* ===== GIAO DIỆN HIỂN THỊ (HOME & MENU) ===== */
+.home-banner {
+    width: 100%;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.15);
+    background-color: var(--diner-dark);
+    display: flex;
+}
+
+/* Layout quyển menu */
+.menu-book-layout {
+    width: 100%;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.15);
+    background-color: var(--diner-dark);
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các ảnh rớt dòng */
+}
+
+.home-banner img {
+    width: 100%;
+    display: block;
+}
+
+.menu-book-layout {
+    display: flex; /* Flex để ép 2 ảnh luôn bằng nhau */
+}
+
+.menu-book-layout img {
+    width: 50%; /* Mỗi trang chiếm chính xác 50% */
+    display: block;
+    object-fit: cover;
+}
+
+.menu-book-layout img:nth-child(even) {
+    border-left: 2px solid rgba(0, 0, 0, 0.2); /* Nếp gấp sách đậm hơn chút */
+}
+
+/* ===== FOOTER CỔ ĐIỂN ===== */
+.diner-footer {
+    background-color: var(--diner-red);
+    color: #fff;
+    padding: 50px 40px;
+    margin-top: auto;
+    font-size: 13px;
+    border-top: 4px solid var(--diner-dark);
+    position: relative;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 40px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.footer-item i {
+    font-size: 18px;
+    margin-top: 2px;
+}
+
+.footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subscribe-box {
+    display: flex;
+    margin-top: 10px;
+    max-width: 400px;
+}
+
+.subscribe-box input {
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    flex: 1;
+    font-family: inherit;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+
+.subscribe-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.subscribe-box button {
+    padding: 10px 20px;
+    background: #fff;
+    color: var(--diner-red);
+    border: none;
+    font-family: inherit;
+    font-weight: 700;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.subscribe-box button:hover {
+    background: var(--diner-bg);
+}
+
+.footer-bottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+}
+
+.footer-col h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.footer-col p,
+.footer-col a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    line-height: 1.8;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+.badge-img {
+    margin-top: 20px;
+    width: 120px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .menu-book-layout {
+        grid-template-columns: 1fr; /* Mobile/Tablet chỉ hiện 1 cột dọc */
+        padding: 0 20px 40px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .stripes-bg {
+        width: 100%;
+        height: 15px;
+        bottom: auto;
+        border-right: none;
+        border-bottom: 2px solid var(--diner-dark);
+        z-index: 100;
+    }
+
+    .diner-sidebar {
+        position: relative;
+        left: 0;
+        top: 15px;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .checker-tab,
+    .checker-tab-2 {
+        display: none;
+    }
+
+    .sidebar-tagline {
+        display: none;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        width: auto;
+        gap: 15px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .diner-main {
+        margin-left: 0;
+    }
+
+    .footer-top,
+    .footer-bottom {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
