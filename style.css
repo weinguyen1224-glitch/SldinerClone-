@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
     --diner-bg: #ead9ba; /* Cập nhật màu nền theo yêu cầu */
@@ -15,7 +15,7 @@
 
 body {
     background-color: var(--diner-bg);
-    font-family: "Courier Prime", monospace;
+    font-family: "Space Mono", "Courier New", Courier, monospace;
     color: var(--diner-dark);
     display: flex;
     min-height: 100vh;
