@@ -1,227 +1,572 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S&L Diner - Menu</title>
-    <link rel="shortcut icon" href="https://sldiner.com/wp-content/uploads/2018/12/logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Background Sọc Đỏ Trắng -->
-    <div class="stripes-bg"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>S&L Diner - Menu</title>
+        <link
+            rel="shortcut icon"
+            href="https://sldiner.com/wp-content/uploads/2018/12/logo.png"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Background Sọc Đỏ Trắng -->
+        <div class="stripes-bg"></div>
 
-    <!-- Sidebar Thẻ Menu -->
-    <aside class="diner-sidebar">
-        <!-- Họa tiết Caro thò ra -->
-        <div class="checker-tab"></div>
-        <div class="checker-tab-2"></div>
+        <!-- Sidebar Thẻ Menu -->
+        <aside class="diner-sidebar">
+            <!-- Họa tiết Caro thò ra -->
+            <div class="checker-tab"></div>
+            <div class="checker-tab-2"></div>
 
-        <a href="index.html">
-            <img src="https://sldiner.com/wp-content/themes/yootheme/cache/logo-xoa-nen-7e51f199.webp" alt="S&L Diner Logo" class="sidebar-logo">
-        </a>
+            <a href="index.html">
+                <img
+                    src="https://sldiner.com/wp-content/themes/yootheme/cache/logo-xoa-nen-7e51f199.webp"
+                    alt="S&L Diner Logo"
+                    class="sidebar-logo"
+                />
+            </a>
 
-        <div class="sidebar-tagline">Real American Family Diner</div>
+            <div class="sidebar-tagline">Real American Family Diner</div>
 
-        <nav class="sidebar-nav">
-            <a href="index.html">HOME</a>
-            <a href="menu.html" class="active"><span class="dot">•</span> MENU <span class="dot">•</span></a>
-            <a href="#">BOOKING</a>
-            <a href="#">ORDER</a>
-            <a href="#">CONTACT US</a>
-            <a href="#">MORE &lt;</a>
-        </nav>
+            <nav class="sidebar-nav">
+                <a href="index.html">HOME</a>
+                <a href="menu.html" class="active"
+                    ><span class="dot">•</span> MENU
+                    <span class="dot">•</span></a
+                >
+                <a href="#">BOOKING</a>
+                <a href="#">ORDER</a>
+                <a href="#">CONTACT US</a>
+                <a href="#">MORE &lt;</a>
+            </nav>
 
-        <div class="sidebar-socials">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-messenger"></i></a>
-        </div>
-
-        <div class="sidebar-flags">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" alt="Tiếng Việt">
-        </div>
-    </aside>
-
-    <!-- Nội Dung Chính -->
-    <main class="diner-main">
-        <div class="main-wrapper">
-            <header class="diner-header">
-                <h1>MENU</h1>
-                <!-- Họa tiết caro góc trên -->
-                <div class="checker-top-right"></div>
-            </header>
-
-            <!-- Layout 2 trang menu ghép lại như cuốn sách -->
-            <div class="menu-book-layout">
-                <img src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-6-scaled-b5b1b93d.webp" alt="Menu Page Breakfast" loading="lazy">
-                <img src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-7-scaled-fb38b294.webp" alt="Menu Page Salad" loading="lazy">
-
-                <img src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-8-scaled-d02dd101.webp" alt="Menu Page Drinks" loading="lazy">
-                <img src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-9-scaled-9ea4daa8.webp" alt="Menu Page Drinks 2" loading="lazy">
-
-                <img src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-10-scaled-bcb10eb6.webp" alt="Menu Page" loading="lazy">
-                <img src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-11-scaled-f238051f.webp" alt="Menu Page" loading="lazy">
-
-                <img src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-12-scaled-21a319e4.webp" alt="Menu Page" loading="lazy">
-                <img src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-13-scaled-6f2a124d.webp" alt="Menu Page" loading="lazy">
+            <div class="sidebar-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-messenger"></i></a>
             </div>
 
-            <!-- Khu vực Bảng Recommendation (Best Food) -->
-            <section class="menu-rcm-area" style="width: 100%; margin-top: 60px; padding: 40px; background: #fff; border: 3px solid var(--diner-dark); border-radius: 10px; box-shadow: 5px 5px 0px rgba(0,0,0,0.1);">
-                <div style="text-align: center; margin-bottom: 40px;">
-                    <h2 style="font-family: 'Arial Black', Impact, sans-serif; color: var(--diner-red); letter-spacing: 2px;">CHEF'S RECOMMENDATIONS</h2>
-                    <p style="font-style: italic; color: #666; margin-top: 10px;">(Gợi ý 5 món ăn tiêu biểu - Best Food For...)</p>
+            <div class="sidebar-flags">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+                    alt="English"
+                />
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg"
+                    alt="Tiếng Việt"
+                />
+            </div>
+        </aside>
+
+        <!-- Nội Dung Chính -->
+        <main class="diner-main">
+            <div class="main-wrapper">
+                <header class="diner-header">
+                    <h1>MENU</h1>
+                    <!-- Họa tiết caro góc trên -->
+                    <div class="checker-top-right"></div>
+                </header>
+
+                <!-- Layout 2 trang menu ghép lại như cuốn sách -->
+                <div class="menu-book-layout">
+                    <img
+                        src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-6-scaled-b5b1b93d.webp"
+                        alt="Menu Page Breakfast"
+                        loading="lazy"
+                    />
+                    <img
+                        src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-7-scaled-fb38b294.webp"
+                        alt="Menu Page Salad"
+                        loading="lazy"
+                    />
+
+                    <img
+                        src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-8-scaled-d02dd101.webp"
+                        alt="Menu Page Drinks"
+                        loading="lazy"
+                    />
+                    <img
+                        src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-9-scaled-9ea4daa8.webp"
+                        alt="Menu Page Drinks 2"
+                        loading="lazy"
+                    />
+
+                    <img
+                        src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-10-scaled-bcb10eb6.webp"
+                        alt="Menu Page"
+                        loading="lazy"
+                    />
+                    <img
+                        src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-11-scaled-f238051f.webp"
+                        alt="Menu Page"
+                        loading="lazy"
+                    />
+
+                    <img
+                        src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-12-scaled-21a319e4.webp"
+                        alt="Menu Page"
+                        loading="lazy"
+                    />
+                    <img
+                        src="https://sldiner.com/wp-content/themes/yootheme/cache/ENG_Menu-2026_-13-scaled-6f2a124d.webp"
+                        alt="Menu Page"
+                        loading="lazy"
+                    />
                 </div>
 
-                <!-- Bảng so sánh / Recommend lớn -->
-                <div style="overflow-x: auto;">
-                    <table style="width: 100%; border-collapse: collapse; min-width: 800px; text-align: left;">
-                        <thead>
-                            <tr style="background-color: var(--diner-dark); color: #fff; text-transform: uppercase;">
-                                <th style="padding: 15px; border: 2px solid var(--diner-dark); width: 25%;">Tên món & Hình ảnh</th>
-                                <th style="padding: 15px; border: 2px solid var(--diner-dark); width: 25%;">Phù hợp cho ai? (Ví dụ: Không gút)</th>
-                                <th style="padding: 15px; border: 2px solid var(--diner-dark); width: 20%;">Khẩu phần / Dinh dưỡng</th>
-                                <th style="padding: 15px; border: 2px solid var(--diner-dark); width: 20%;">So sánh (Điểm nhấn S&L)</th>
-                                <th style="padding: 15px; border: 2px solid var(--diner-dark); width: 10%; text-align: center;">Rating</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Item 1: Steak -->
-                            <tr style="border-bottom: 2px solid var(--diner-bg); transition: background 0.3s;">
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">
-                                    <strong style="color: var(--diner-red); font-size: 16px; display: block; margin-bottom: 8px;">U.S. Top Blade Steak</strong>
-                                    <div style="width: 100%; height: 100px; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; border-radius: 5px;">[Hình Steak]</div>
-                                </td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">
-                                    Phù hợp với người ăn theo chế độ Low-carb, Keto. (Chỗ trống để note: Không hợp người bị gút)
-                                </td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">
-                                    Khẩu phần 250g lõi vai bò Mỹ non, giàu Protein, sắt kẽm.
-                                </td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">
-                                    Bò nhập khẩu chuẩn Mỹ mềm mọng, không bị dai như các quán khác.
-                                </td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top; text-align: center; color: #f39c12; font-size: 18px;">
-                                    ★★★★★
-                                </td>
-                            </tr>
-
-                            <!-- Item 2 (Placeholder) -->
-                            <tr style="border-bottom: 2px solid var(--diner-bg);">
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">
-                                    <strong style="color: var(--diner-red); font-size: 16px; display: block; margin-bottom: 8px;">Classic Cheeseburger</strong>
-                                    <div style="width: 100%; height: 100px; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; border-radius: 5px;">[Hình Burger]</div>
-                                </td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">Trống để điền</td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">Trống để điền</td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">Trống để điền</td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); text-align: center; color: #f39c12;">★★★★☆</td>
-                            </tr>
-
-                            <!-- Item 3 (Placeholder) -->
-                            <tr style="border-bottom: 2px solid var(--diner-bg);">
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">
-                                    <strong style="color: var(--diner-red); font-size: 16px; display: block; margin-bottom: 8px;">Fluffy Pancake</strong>
-                                    <div style="width: 100%; height: 100px; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; border-radius: 5px;">[Hình Pancake]</div>
-                                </td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">Trống để điền</td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">Trống để điền</td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">Trống để điền</td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); text-align: center; color: #f39c12;">★★★★★</td>
-                            </tr>
-
-                            <!-- Item 4 (Placeholder) -->
-                            <tr style="border-bottom: 2px solid var(--diner-bg);">
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">
-                                    <strong style="color: var(--diner-red); font-size: 16px; display: block; margin-bottom: 8px;">BBQ Pulled Pork Fries</strong>
-                                    <div style="width: 100%; height: 100px; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; border-radius: 5px;">[Hình Fries]</div>
-                                </td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">Trống để điền</td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">Trống để điền</td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">Trống để điền</td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); text-align: center; color: #f39c12;">★★★★☆</td>
-                            </tr>
-
-                            <!-- Item 5 (Placeholder) -->
-                            <tr>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">
-                                    <strong style="color: var(--diner-red); font-size: 16px; display: block; margin-bottom: 8px;">Southwest Chicken Salad</strong>
-                                    <div style="width: 100%; height: 100px; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; border-radius: 5px;">[Hình Salad]</div>
-                                </td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">Trống để điền</td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">Trống để điền</td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); vertical-align: top;">Trống để điền</td>
-                                <td style="padding: 15px; border: 2px solid var(--diner-bg); text-align: center; color: #f39c12;">★★★★★</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-        </div>
-
-        <!-- Footer -->
-        <footer class="diner-footer">
-            <div class="footer-top">
-                <div class="footer-contact">
-                    <div class="footer-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>24 Duong Thanh, Hoan Kiem, Ha Noi</div>
+                <!-- Khu vực Bảng Recommendation (Best Food) -->
+                <section
+                    class="menu-rcm-area"
+                    style="
+                        width: 100%;
+                        margin-top: 60px;
+                        padding: 40px;
+                        background: #fff;
+                        border: 3px solid var(--diner-dark);
+                        border-radius: 10px;
+                        box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+                    "
+                >
+                    <div style="text-align: center; margin-bottom: 40px">
+                        <h2
+                            style="
+                                font-family:
+                                    &quot;Arial Black&quot;, Impact, sans-serif;
+                                color: var(--diner-dark);
+                                letter-spacing: 2px;
+                                text-transform: uppercase;
+                            "
+                        >
+                            Tiêu đề cái bảng
+                        </h2>
                     </div>
-                    <div class="footer-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>0243.710.0529</div>
-                    </div>
-                    <div class="footer-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>109 Hoang Cau, Dong Da, Ha Noi</div>
-                    </div>
-                    <div class="footer-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>0243.682.4198</div>
-                    </div>
-                </div>
 
-                <div class="footer-subscribe">
-                    <div class="footer-item">
-                        <i class="far fa-envelope"></i>
-                        <div>Contact us : info@sldiner.com</div>
+                    <!-- Bảng so sánh / Recommend lớn -->
+                    <div style="overflow-x: auto">
+                        <table
+                            style="
+                                width: 100%;
+                                border-collapse: collapse;
+                                min-width: 800px;
+                                text-align: center;
+                            "
+                        >
+                            <thead>
+                                <tr
+                                    style="
+                                        text-transform: uppercase;
+                                        font-weight: bold;
+                                    "
+                                >
+                                    <th
+                                        style="
+                                            padding: 15px;
+                                            border-right: 2px solid
+                                                var(--diner-dark);
+                                            width: 10%;
+                                        "
+                                    ></th>
+                                    <th
+                                        style="
+                                            padding: 15px;
+                                            border-right: 2px solid
+                                                var(--diner-dark);
+                                            width: 30%;
+                                        "
+                                    >
+                                        ...
+                                    </th>
+                                    <th
+                                        style="
+                                            padding: 15px;
+                                            border-right: 2px solid
+                                                var(--diner-dark);
+                                            width: 30%;
+                                        "
+                                    >
+                                        ...
+                                    </th>
+                                    <th style="padding: 15px; width: 30%">
+                                        ....
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Hàng 1 -->
+                                <tr
+                                    style="
+                                        border-top: 2px solid var(--diner-dark);
+                                        border-bottom: 2px solid
+                                            var(--diner-dark);
+                                    "
+                                >
+                                    <th
+                                        style="
+                                            padding: 15px;
+                                            border-right: 2px solid
+                                                var(--diner-dark);
+                                            text-transform: uppercase;
+                                            vertical-align: middle;
+                                        "
+                                    >
+                                        ...
+                                    </th>
+                                    <td
+                                        style="
+                                            padding: 15px;
+                                            border-right: 2px solid
+                                                var(--diner-dark);
+                                            vertical-align: top;
+                                        "
+                                    >
+                                        <!-- BURGERS -->
+                                        <div
+                                            style="
+                                                font-weight: bold;
+                                                margin-bottom: 15px;
+                                            "
+                                        >
+                                            BURGERS
+                                        </div>
+                                        <div
+                                            style="
+                                                display: flex;
+                                                justify-content: center;
+                                                gap: 20px;
+                                                margin-bottom: 10px;
+                                            "
+                                        >
+                                            <div
+                                                style="
+                                                    text-align: center;
+                                                    flex: 1;
+                                                    max-width: 150px;
+                                                "
+                                            >
+                                                <div
+                                                    style="
+                                                        width: 100%;
+                                                        aspect-ratio: 1/1;
+                                                        background-color: transparent;
+                                                        border-radius: 8px;
+                                                        overflow: hidden;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        margin: 0 auto;
+                                                    "
+                                                >
+                                                    <img
+                                                        src="./BUGER/1.png"
+                                                        alt="Burger 1"
+                                                        style="
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            object-fit: cover;
+                                                        "
+                                                    />
+                                                </div>
+                                                <div
+                                                    style="
+                                                        font-size: 15px;
+                                                        margin-top: 8px;
+                                                        font-weight: 500;
+                                                    "
+                                                >
+                                                    CHICKEN BACON MELT BURGER
+                                                </div>
+                                            </div>
+                                            <div
+                                                style="
+                                                    text-align: center;
+                                                    flex: 1;
+                                                    max-width: 150px;
+                                                "
+                                            >
+                                                <div
+                                                    style="
+                                                        width: 100%;
+                                                        aspect-ratio: 1/1;
+                                                        background-color: transparent;
+                                                        border-radius: 8px;
+                                                        overflow: hidden;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        margin: 0 auto;
+                                                    "
+                                                >
+                                                    <img
+                                                        src="./BUGER/2.png"
+                                                        alt="Burger 2"
+                                                        style="
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            object-fit: cover;
+                                                        "
+                                                    />
+                                                </div>
+                                                <div
+                                                    style="
+                                                        font-size: 15px;
+                                                        margin-top: 8px;
+                                                        font-weight: 500;
+                                                    "
+                                                >
+                                                    CALIFORNIA CHICKEN BURGER
+                                                </div>
+                                            </div>
+                                            <div
+                                                style="
+                                                    text-align: center;
+                                                    flex: 1;
+                                                    max-width: 150px;
+                                                "
+                                            >
+                                                <div
+                                                    style="
+                                                        width: 100%;
+                                                        aspect-ratio: 1/1;
+                                                        background-color: transparent;
+                                                        border-radius: 8px;
+                                                        overflow: hidden;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        margin: 0 auto;
+                                                    "
+                                                >
+                                                    <img
+                                                        src="./BUGER/3.png"
+                                                        alt="Burger 3"
+                                                        style="
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            object-fit: cover;
+                                                        "
+                                                    />
+                                                </div>
+                                                <div
+                                                    style="
+                                                        font-size: 15px;
+                                                        margin-top: 8px;
+                                                        font-weight: 500;
+                                                    "
+                                                >
+                                                    BUFFALO CHICKEN SANDWICH
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            style="
+                                                margin-bottom: 20px;
+                                                font-size: 14px;
+                                                text-align: left;
+                                                padding-left: 10px;
+                                            "
+                                        >
+                                            &rarr; Why: ...
+                                        </div>
+
+                                        <!-- STEAK -->
+                                        <div
+                                            style="
+                                                font-weight: bold;
+                                                margin-bottom: 15px;
+                                                text-transform: uppercase;
+                                            "
+                                        >
+                                            Steak
+                                        </div>
+                                        <div
+                                            style="
+                                                display: flex;
+                                                justify-content: center;
+                                                margin-bottom: 10px;
+                                                padding-left: 10px;
+                                            "
+                                        >
+                                            <div
+                                                style="
+                                                    text-align: center;
+                                                    max-width: 200px;
+                                                    width: 100%;
+                                                "
+                                            >
+                                                <div
+                                                    style="
+                                                        width: 100%;
+                                                        aspect-ratio: 4/3;
+                                                        background-color: transparent;
+                                                        border-radius: 8px;
+                                                        overflow: hidden;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        margin: 0 auto;
+                                                    "
+                                                >
+                                                    <img
+                                                        src="./STEAK//1.png"
+                                                        alt="Steak"
+                                                        style="
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            object-fit: contain;
+                                                        "
+                                                    />
+                                                </div>
+                                                <div
+                                                    style="
+                                                        font-size: 15px;
+                                                        margin-top: 8px;
+                                                        font-weight: 500;
+                                                    "
+                                                >
+                                                    Tên<br />tả
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            style="
+                                                font-size: 14px;
+                                                text-align: left;
+                                                padding-left: 10px;
+                                            "
+                                        >
+                                            &rarr; Why: ...
+                                        </div>
+                                    </td>
+                                    <td
+                                        style="
+                                            padding: 15px;
+                                            border-right: 2px solid
+                                                var(--diner-dark);
+                                        "
+                                    ></td>
+                                    <td style="padding: 15px"></td>
+                                </tr>
+
+                                <!-- Hàng 2 -->
+                                <tr
+                                    style="
+                                        border-bottom: 2px solid
+                                            var(--diner-dark);
+                                    "
+                                >
+                                    <th
+                                        style="
+                                            padding: 15px;
+                                            border-right: 2px solid
+                                                var(--diner-dark);
+                                            text-transform: uppercase;
+                                            vertical-align: middle;
+                                        "
+                                    >
+                                        ...
+                                    </th>
+                                    <td
+                                        style="
+                                            padding: 15px;
+                                            border-right: 2px solid
+                                                var(--diner-dark);
+                                        "
+                                    ></td>
+                                    <td
+                                        style="
+                                            padding: 15px;
+                                            border-right: 2px solid
+                                                var(--diner-dark);
+                                        "
+                                    ></td>
+                                    <td style="padding: 15px"></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div style="margin-top: 15px;">
-                        <div style="margin-bottom: 8px;">Stay up to date</div>
-                        <div class="subscribe-box">
-                            <input type="text" placeholder="Enter Phone number/ Email">
-                            <button>Subscribe</button>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer class="diner-footer">
+                <div class="footer-top">
+                    <div class="footer-contact">
+                        <div class="footer-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>24 Duong Thanh, Hoan Kiem, Ha Noi</div>
+                        </div>
+                        <div class="footer-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>0243.710.0529</div>
+                        </div>
+                        <div class="footer-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>109 Hoang Cau, Dong Da, Ha Noi</div>
+                        </div>
+                        <div class="footer-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>0243.682.4198</div>
+                        </div>
+                    </div>
+
+                    <div class="footer-subscribe">
+                        <div class="footer-item">
+                            <i class="far fa-envelope"></i>
+                            <div>Contact us : info@sldiner.com</div>
+                        </div>
+                        <div style="margin-top: 15px">
+                            <div style="margin-bottom: 8px">
+                                Stay up to date
+                            </div>
+                            <div class="subscribe-box">
+                                <input
+                                    type="text"
+                                    placeholder="Enter Phone number/ Email"
+                                />
+                                <button>Subscribe</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="footer-bottom">
-                <div class="footer-col">
-                    <h4>CÔNG TY TNHH SLZ VIỆT NAM</h4>
-                    <p>Địa chỉ: số 1 N4, phố Khuất Duy Tiến, phường Thanh Xuân Bắc,<br>quận Thanh Xuân, thành phố Hà Nội</p>
-                    <br>
-                    <h4>GIẤY CHỨNG NHẬN ĐKKD</h4>
-                    <p>Số 0108167942 do Sở Kế hoạch và Đầu tư thành phố Hà Nội<br>cấp ngày 21/02/2018</p>
+                <div class="footer-bottom">
+                    <div class="footer-col">
+                        <h4>CÔNG TY TNHH SLZ VIỆT NAM</h4>
+                        <p>
+                            Địa chỉ: số 1 N4, phố Khuất Duy Tiến, phường Thanh
+                            Xuân Bắc,<br />quận Thanh Xuân, thành phố Hà Nội
+                        </p>
+                        <br />
+                        <h4>GIẤY CHỨNG NHẬN ĐKKD</h4>
+                        <p>
+                            Số 0108167942 do Sở Kế hoạch và Đầu tư thành phố Hà
+                            Nội<br />cấp ngày 21/02/2018
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>CHÍNH SÁCH VÀ QUY ĐỊNH</h4>
+                        <p><a href="#">Chính sách và quy định chung</a></p>
+                        <p><a href="#">Chính sách thanh toán</a></p>
+                        <p><a href="#">Chính sách bảo mật</a></p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>DỊCH VỤ KHÁCH HÀNG</h4>
+                        <p><a href="#">Chính sách giao hàng</a></p>
+                        <p><a href="#">Chính sách đổi trả và hoàn tiền</a></p>
+                        <img
+                            src="https://sldiner.com/wp-content/themes/yootheme/cache/Layer-53-f5d13b9d.webp"
+                            alt="Bo Cong Thuong"
+                            class="badge-img"
+                        />
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h4>CHÍNH SÁCH VÀ QUY ĐỊNH</h4>
-                    <p><a href="#">Chính sách và quy định chung</a></p>
-                    <p><a href="#">Chính sách thanh toán</a></p>
-                    <p><a href="#">Chính sách bảo mật</a></p>
-                </div>
-                <div class="footer-col">
-                    <h4>DỊCH VỤ KHÁCH HÀNG</h4>
-                    <p><a href="#">Chính sách giao hàng</a></p>
-                    <p><a href="#">Chính sách đổi trả và hoàn tiền</a></p>
-                    <img src="https://sldiner.com/wp-content/themes/yootheme/cache/Layer-53-f5d13b9d.webp" alt="Bo Cong Thuong" class="badge-img">
-                </div>
-            </div>
-        </footer>
-    </main>
-</body>
+            </footer>
+        </main>
+    </body>
 </html>
