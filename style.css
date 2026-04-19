@@ -372,7 +372,11 @@ body.home-page .main-wrapper {
     color: #5a3e28;
     line-height: 1.5;
     margin-top: 0;
-    background: linear-gradient(180deg, rgba(248, 226, 186, 0.95) 0%, rgba(244, 221, 186, 0.95) 100%);
+    background: linear-gradient(
+        180deg,
+        rgba(248, 226, 186, 0.95) 0%,
+        rgba(244, 221, 186, 0.95) 100%
+    );
     border: 2px solid rgba(178, 43, 36, 0.18);
     border-radius: 12px;
     padding: 10px 12px;
@@ -467,6 +471,10 @@ body.home-page .main-wrapper {
 
 .menu-rcm-area tbody tr:first-child th {
     background: linear-gradient(180deg, #f6e2bc 0%, #efd2a0 100%);
+    font-family: "Arial Black", Impact, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    line-height: 1.35;
 }
 
 .menu-rcm-area tbody th,
@@ -490,6 +498,10 @@ body.home-page .main-wrapper {
 
 .menu-rcm-area tbody tr:first-child th {
     background: linear-gradient(180deg, #f6e2bc 0%, #efd2a0 100%);
+    font-family: "Arial Black", Impact, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    line-height: 1.35;
 }
 
 .menu-rcm-area tbody th,
