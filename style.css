@@ -200,6 +200,12 @@ body {
     align-items: stretch;
 }
 
+body.home-page .main-wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 28px 60px;
+}
+
 .diner-header {
     padding: 30px 0;
     text-align: center;
